@@ -4,7 +4,7 @@ import data from "./custom.geo.json";
 import "./App.css";
 
 function App() {
-  const [property, setProperty] = useState("pop_est");
+  const [property, setProperty] = useState("gdp_md_est");
   return (
     <React.Fragment>
       <div className="mid">
@@ -15,9 +15,9 @@ function App() {
           value={property}
           onChange={event => setProperty(event.target.value)}
         >
+          <option value="gdp_md_est">GDP</option>
           <option value="pop_est">Population</option>
           <option value="name_len">Name length</option>
-          <option value="gdp_md_est">GDP</option>
         </select>
       </div>
     </React.Fragment>

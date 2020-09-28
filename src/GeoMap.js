@@ -10,7 +10,10 @@ function GeoChart({ data, property }) {
   const svgRef = useRef();
   const wrapperRef = useRef();
   const dimensions = useResizeObserver(wrapperRef);
-  const [selectedCountry, setSelectedCountry] = useState(null);
+  const india = (data.features.filter(feature=> {if( feature.properties.admin === "India" ){return feature } }  ) )
+  console.log(india[0]);
+  const [selectedCountry, setSelectedCountry] = useState(india[0]);
+  console.log(selectedCountry);
 
   useEffect(() => {
     const svg = select(svgRef.current);
@@ -24,17 +27,14 @@ function GeoChart({ data, property }) {
 
     const { width, height } =
       dimensions || wrapperRef.current.getBoundingClientRect();
+      
 
-    // projects geo-coordinates on a 2D plane
     const projection = geoMercator()
-      .fitSize([width, height], selectedCountry || data)
+      .fitSize([width, height], selectedCountry || data )
       .precision(100);
 
-    // takes geojson data,
-    // transforms that into the d attribute of a path element
     const pathGenerator = geoPath().projection(projection);
 
-    // render each country
     svg
       .selectAll(".country")
       .data(data.features)
