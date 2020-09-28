@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cd65f11c01a33cd41356bdfcdb1eb0dc",
+    "revision": "7584d915c502b09f6870d64e3a8bdb4c",
     "url": "/world-map-with-react-n-d3/index.html"
   },
   {
-    "revision": "4c993aa158389ceb2aa9",
+    "revision": "45184ab65ddd28915f5d",
     "url": "/world-map-with-react-n-d3/static/css/main.f22f190e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/world-map-with-react-n-d3/static/js/2.b316cccd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4c993aa158389ceb2aa9",
-    "url": "/world-map-with-react-n-d3/static/js/main.f58edd5e.chunk.js"
+    "revision": "45184ab65ddd28915f5d",
+    "url": "/world-map-with-react-n-d3/static/js/main.c503e214.chunk.js"
   },
   {
     "revision": "5b16c8b5489d0a9d8f04",
